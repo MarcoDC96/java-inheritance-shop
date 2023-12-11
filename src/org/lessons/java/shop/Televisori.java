@@ -28,4 +28,8 @@ public class Televisori extends Prodotto{
     public void setSmart(boolean smart) {
         this.smart = smart;
     }
+
+    public String toString() {
+        return "Il prodotto è uno Smartphone" + "il nome è: " + getNome() +"\n"+ "la descrizione è: " + getDescrizione() +"\n"+ "Il prezzo è: " + getDescrizione() +"\n"+ "il prezzo è: " + getPrezzo() +"\n"+ "l'iva è: " + getIva() +"\n"+ "dimensioni: " + getDimensioni() +"\n"+ "è smart?: " + isSmart();
+    }
 }

@@ -28,4 +28,8 @@ public class Cuffie extends Prodotto{
     public void setWirless(boolean wirless) {
         this.wirless = wirless;
     }
+
+    public String toString() {
+        return "Il prodotto è uno Smartphone" + "il nome è: " + getNome() +"\n"+ "la descrizione è: " + getDescrizione() +"\n"+ "Il prezzo è: " + getDescrizione() +"\n"+ "il prezzo è: " + getPrezzo() +"\n"+ "l'iva è: " + getIva() +"\n"+ "colore: " + getColore() +"\n"+ "è wirless: " + isWirless();
+    }
 }

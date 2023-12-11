@@ -1,19 +1,21 @@
 package org.lessons.java.shop;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Scanner;
 
 public class CarrelloMain {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+        ArrayList<Prodotto> array = new ArrayList<>();
         boolean stop = false;
         while (!stop) {
             System.out.println("Vuoi inserire un prodotto nel carrello? si/no");
             String userSiNo = scan.nextLine().toLowerCase();
             switch (userSiNo) {
                 case "si":
-                    System.out.println("Vuoi inserire uno Smartphone, Televisore, Cuffia?");
+                    System.out.println("Vuoi inserire uno Smartphone, Televisore, Cuffie?");
                     String sceltaProdotto = scan.nextLine();
                     if (sceltaProdotto.equals("Smartphone")) {
                         System.out.print("Inserisci il nome del prodotto: ");
@@ -28,7 +30,7 @@ public class CarrelloMain {
                         int userMemoriaProdotto = scan.nextInt();
 
                         Smartphone smartphone = new Smartphone(userNomeProdotto, userDescrizioneProdotto, userPrezzoProdotto, userIvaProdotto, userMemoriaProdotto);
-
+                        array.add(smartphone);
                     }
 
                     else if (sceltaProdotto.equals("Televisore")) {
@@ -52,7 +54,7 @@ public class CarrelloMain {
                         }
 
                         Televisori televisori = new Televisori(userNomeProdotto, userDescrizioneProdotto, userPrezzoProdotto, userIvaProdotto, userDimensioniProdotto, userScelta);
-
+                        array.add(televisori);
                     }
                     else if (sceltaProdotto.equals("Cuffie")) {
                         System.out.print("Inserisci il nome del prodotto: ");
@@ -67,7 +69,7 @@ public class CarrelloMain {
                         String userColoreProdotto = scan.nextLine();
                         System.out.println("Le cuffie sono wirless? true/false");
                         boolean userScelta = scan.nextBoolean();
-                        if(userScelta==true){
+                        if(userScelta == true){
                             System.out.println("Le cuffie sono wirless");
                         } else {
                             System.out.println("Le cuffie sono cablate");
@@ -77,6 +79,7 @@ public class CarrelloMain {
 
 
                         Cuffie cuffie = new Cuffie(userNomeProdotto, userDescrizioneProdotto, userPrezzoProdotto, userIvaProdotto, userColoreProdotto, userScelta);
+                        array.add(cuffie);
                     }
 
                     break;
@@ -87,6 +90,10 @@ public class CarrelloMain {
                     stop = true;
                     break;
 
+            }
+
+            for (Prodotto p : array){
+                System.out.println(p);
             }
 
         }

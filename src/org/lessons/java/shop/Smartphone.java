@@ -37,9 +37,6 @@ public class Smartphone extends Prodotto{
 
     @Override
     public String toString() {
-        return "Smartphone{" +
-                "codiceIMEI=" + codiceIMEI +
-                ", memoria=" + memoria +
-                '}';
+        return "Il prodotto è uno Smartphone" + "il nome è: " + getNome() +"\n"+ "la descrizione è: " + getDescrizione() +"\n"+ "Il prezzo è: " + getDescrizione() +"\n"+ "il prezzo è: " + getPrezzo() +"\n"+ "l'iva è: " + getIva() +"\n"+ "memoria: " + getMemoria() +"\n"+ "il codice IMEI è: " + getCodiceIMEI();
     }
 }
